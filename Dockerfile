@@ -1,14 +1,10 @@
+
 FROM golang:1.19
-
 USER root
-
 WORKDIR /
-
-
-
+MAINTAINER zan-san 
 # pre-copy/cache go.mod for pre-downloading dependencies and only redownloading them in subsequent builds if they change
 
-#COPY dpchain/go.mod dpchain/go.sum ./
 
 COPY . .
 
@@ -25,9 +21,6 @@ RUN go mod download && go mod verify
 WORKDIR /dpchain/dper/client
 
 RUN ./build.sh
-
-
-
 
 
 CMD cd /dpchain/dper/client/project && ./dperClient
