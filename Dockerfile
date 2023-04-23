@@ -16,11 +16,11 @@ RUN go env -w GO111MODULE=on
 
 RUN go mod download && go mod verify
 
+WORKDIR /dpchain/dper/client/conf
+
+RUN go run initConfig.go
 
 
-WORKDIR /dpchain/dper/client
+#CMD cd /dpchain/dper/client/project && ./dperClient
 
-RUN ./build.sh
-
-
-CMD cd /dpchain/dper/client/project && ./dperClient
+CMD cd /dpchain/dper/client/auto/dper_dper1 && ./dperClient -mode=multi_http
