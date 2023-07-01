@@ -26,5 +26,10 @@ RUN go run initConfig.go
 CMD cd /dpchain/dper/client/auto/dper_dper1 && ./dperClient -mode=multi_http
 
 
-#bulid commend
+
+
+#put this file in same directory of dpchain
+
+#command 
 #docker build -t zansan/dper:0.9 .
+
