@@ -24,3 +24,7 @@ RUN go run initConfig.go
 #CMD cd /dpchain/dper/client/project && ./dperClient
 
 CMD cd /dpchain/dper/client/auto/dper_dper1 && ./dperClient -mode=multi_http
+
+
+#bulid commend
+#docker build -t zansan/dper:0.9 .
